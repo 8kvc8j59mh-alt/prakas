@@ -267,16 +267,20 @@ animation:grow 2s ease;
 from{width:0}
 }
 
-.project-img{
-height:180px;
-background:linear-gradient(135deg,#222,#111);
-border-radius:12px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#777;
-margin-bottom:15px;
+.project-img {
+  width: 100%;
+  height: 180px; /* adjust as needed */
+  overflow: hidden;
+  border-radius: 10px;
 }
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps image inside without stretching */
+  display: block;
+}
+
 
 .project-buttons{
 display:flex;
@@ -585,8 +589,8 @@ Services represent academic and project-based experience developed through unive
 <div class="cards">
 
 <div class="glass card">
-<div class="project-img">database.png</div>
-<img src="database.png" alt="Database Image">
+  <div class="project-img">
+    <img src="database.png" alt="Database Image"> 
 <h3>Student Information Database System</h3>
 <p>SQL-based relational database design.</p>
 <div class="project-buttons">
